@@ -31,26 +31,104 @@
   <body>
     <div class="container">
       <div class="search-engine">
-        <!-----slideshow of movie pictures-->
-        <div class="display-card"></div>
-        <h1>Search the latest</h1>
-
-        <form class="search">
-          <input type="text" placeholder="Search.." />
-          <button type="submit">
-            <i class="fa-solid fa-magnifying-glass"></i>
-          </button>
+      <!----NavBar-->
+      <nav class="navbar navbar-dark bg-dark fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="index.html">Search Movies</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Categories</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Dropdown
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark">
+              <li><a class="dropdown-item" href="trendingMovies.html">Trending Movies</a></li>
+              <li><a class="dropdown-item" href="newMovies.html">New Movies</a></li>
+              <li><a class="dropdown-item" href="animation.html">Best Animation</a></li>
+              <li><a class="dropdown-item" href="family.html">Family time</a></li>
+              <li><a class="dropdown-item" href="adrenaline.html">Shot of Adrenaline</a></li>
+              <li>
+                <hr class="dropdown-divider">
+              </li>
+              <li><a class="dropdown-item" href="#">github repository</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex mt-3" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-success" type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
-
-        <!---Tv Shows-->
-        <div id="tvShow-title">
-          <div class="tv-shows-display" id="tv-shows-display"></div>
-        </div>
-
-        <!-----Movies-->
-        <div class="movies"></div>
       </div>
     </div>
+  </div>
+</nav>
+ 
+
+         <!-----slideshow of movie pictures-->
+        <div class="display-card"></div>
+
+        <div class="row">
+           <div class="col-sm-8">
+             <h1>Search the latest</h1>
+           </div>
+        </div>  
+
+        <!---Movies-->
+        <div class="movies-grid">
+        <div class="row">
+           <div class="col-sm-10">
+             <div class="movies">
+             <a href="aboutMovie.html"><h2>Trending Movies</h2></a>
+          <div class="trending-show" id="trending-show"></div>
+          </div>
+           </div>
+         
+           <div class="col-sm-10">
+             <div class="movies">
+          <a href="aboutMovie.html"><h2>New Movies</h2></a>
+          <div class="new-movies" id="new-movies"></div>
+        </div>
+           </div>
+
+       
+           <div class="col-sm-10">
+             <div class="movies">
+          <a href="aboutMovie.html"><h2>Best Animation</h2></a>
+          <div class="best-animation" id="best-animation"></div>
+        </div>
+           </div>
+
+       
+           <div class="col-sm-10">
+            <div class="movies">
+              <a href="aboutMovie.html"><h2>Family Time</h2></a>
+              <div class="family-time" id="family-time"></div>
+             </div>
+           </div>
+
+       
+           <div class="col-sm-10">
+            <div class="movies">
+              <a href="aboutMovie.html"><h2>Get a shot of Adrenaline</h2></a>
+              <div class="adrenaline" id="adrenaline"></div>
+            </div>
+           </div>
+         </div>
+        </div>
+       
+        
+
     <script src="src/App.js"></script>
   </body>
 </html>

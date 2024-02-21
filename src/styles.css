@@ -1,31 +1,40 @@
-.search-engine {
+body {
+  width: 100%;
   background: black;
+  color: rgb(255, 255, 255);
+}
+body ::-webkit-scrollbar {
+  width: 0;
 }
 
 h1 {
+  margin-top: 70px;
   margin-left: 20px;
   font-size: 72px;
-  color: rgb(52, 19, 168);
-  text-shadow: 5px 5px rgba(198, 249, 255, 0.418);
-  font-family: "Londrina Shadow", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  text-shadow: 5px 5px rgba(20, 173, 0, 0.477);
 }
 
 h2 {
+  margin-top: 15px;
   margin-left: 30px;
-  background: -webkit-linear-gradient(#ff00eecb, #f42679);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  font-family: "Londrina Shadow", sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  display: flex;
+  justify-content: flex-start;
+  font-size: 35px;
+}
+h2 a {
+  text-decoration: none;
+  color: white;
+}
+
+h2 a::after {
+  color: aquamarine;
 }
 .search {
   border: 1px solid grey;
   border-radius: 100px;
   padding: 8px 10px;
   display: flex;
+  justify-content: center;
   gap: 5px;
   width: 500px;
   margin: 0 auto;
@@ -46,14 +55,89 @@ h2 {
   padding: 6px 7px;
   border-radius: 6px;
 }
-.tv-shows-display {
+.trending-show,
+.new-movies,
+.best-animation,
+.family-time,
+.adrenaline {
   display: flex;
   flex-wrap: nowrap;
-  justify-content: flex-start;
-  gap: 12px;
+  justify-content: center;
   align-items: center;
-  width: 50px;
+  margin-left: 40px;
+  overflow-x: hidden;
+
+  gap: 17px;
+  align-items: center;
+  width: 100%;
+  white-space: nowrap;
 }
-.show img {
-  width: 70px;
+
+@keyframes scroll-horizontal {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+.trending-show:hover,
+.new-movies:hover,
+.best-animation:hover,
+.family-time:hover,
+.adrenaline:hover {
+  animation: scroll-horizontal 15s linear infinite; /* Start animation on hover */
+}
+
+.trending-show::-webkit-scrollbar {
+  width: 0;
+}
+.new-movies::-webkit-scrollbar {
+  width: 0;
+}
+.best-animation::-webkit-scrollbar {
+  width: 0;
+}
+.family-time::-webkit-scrollbar {
+  width: 0;
+}
+.adrenaline::-webkit-scrollbar {
+  width: 0;
+}
+
+.trending-show img {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+  border-radius: 4px;
+}
+.new-movies img {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+}
+.best-animation img {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+}
+.family-time img {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
+}
+.adrenaline img {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 120px;
 }
