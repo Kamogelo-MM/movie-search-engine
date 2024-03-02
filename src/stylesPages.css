@@ -1,0 +1,17 @@
+.new-movies {
+  margin-top: 50px;
+}
+.new-movies img {
+  width: 80px;
+}
+.animation-movies img {
+  display: flex;
+  justify-content: left;
+  width: 80px;
+}
+.family-movies img {
+  width: 80px;
+}
+.adrenaline-movies img {
+  width: 80px;
+}

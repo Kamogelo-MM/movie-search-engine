@@ -25,15 +25,15 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="/src/stylesPages.css" />
+    <link rel="stylesheet" href="/src/styles.css" />
     <title>Movie Search Engine: Find movies at tip of your fingers</title>
   </head>
   <body>
     <div class="container">
-      <div class="Animation">
+      <div class="trending-movies">
         <nav class="navbar navbar-dark bg-dark fixed-top">
           <div class="container-fluid">
-            <a class="navbar-brand" href="/index.html">Search Movies</a>
+            <a class="navbar-brand" href="index.html">Search Movies</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -67,7 +67,7 @@
                     <a
                       class="nav-link active"
                       aria-current="page"
-                      href="/index.html"
+                      href="index.html"
                       >Home</a
                     >
                   </li>
@@ -139,17 +139,23 @@
             </div>
           </div>
         </nav>
-
+        <!---Display trending movies---->
         <div class="col-sm-12">
-          <h1>Best Animated movies</h1>
+          <h1>Trending Movies</h1>
         </div>
 
-        <div class="box">
-          <div id="animation" class="animation-movies"></div>
+      <div class="box">
+        <div class="grid-row">
+          <span class="border">
+        <div id="trendingMovies" class="trending-movies"></div>
+
+          </span>
         </div>
+
       </div>
-    </div>
 
+    
+    </div>
     <script src="/src/Pages.js"></script>
   </body>
 </html>

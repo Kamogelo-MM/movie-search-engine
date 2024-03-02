@@ -18,12 +18,9 @@
       src="https://kit.fontawesome.com/b27adb8475.js"
       crossorigin="anonymous"
     ></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Londrina+Shadow&display=swap"
-      rel="stylesheet"
-    />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/styles.css" />
     <title>Movie Search Engine: Find movies at tip of your fingers</title>
@@ -40,7 +37,7 @@
     </button>
     <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
       <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Categories</h5>
+        <p class="offcanvas-title" id="offcanvasDarkNavbarLabel">Categories</p>
         <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
       </div>
       <div class="offcanvas-body">
@@ -53,11 +50,11 @@
               Dropdown
             </a>
             <ul class="dropdown-menu dropdown-menu-dark">
-              <li><a class="dropdown-item" href="trendingMovies.html">Trending Movies</a></li>
-              <li><a class="dropdown-item" href="newMovies.html">New Movies</a></li>
-              <li><a class="dropdown-item" href="animation.html">Best Animation</a></li>
-              <li><a class="dropdown-item" href="family.html">Family time</a></li>
-              <li><a class="dropdown-item" href="adrenaline.html">Shot of Adrenaline</a></li>
+              <li><a class="dropdown-item" href="/categories/trendingMovies.html">Trending Movies</a></li>
+              <li><a class="dropdown-item" href="/categories/newMovies.html">New Movies</a></li>
+              <li><a class="dropdown-item" href="/categories/animation.html">Best Animation</a></li>
+              <li><a class="dropdown-item" href="/categories/family.html">Family time</a></li>
+              <li><a class="dropdown-item" href="/categories/adrenaline.html">Shot of Adrenaline</a></li>
               <li>
                 <hr class="dropdown-divider">
               </li>
@@ -81,6 +78,9 @@
         <div class="row">
            <div class="col-sm-8">
              <h1>Search the latest</h1>
+             <p>Welcome! To your go-to destination for finding information on the latest movies and efficiently. 
+              Whether you're searching for the latest family, trending movies or anything in between, 
+              we're here to help you discover what you need.</p>
            </div>
         </div>  
 
@@ -90,14 +90,18 @@
            <div class="col-sm-10">
              <div class="movies">
              <a href="aboutMovie.html"><h2>Trending Movies</h2></a>
-          <div class="trending-show" id="trending-show"></div>
+              <div class="col-sm-12">
+                <div class="trending-show" id="trending-show"></div>
+              </div>
           </div>
            </div>
          
            <div class="col-sm-10">
              <div class="movies">
           <a href="aboutMovie.html"><h2>New Movies</h2></a>
-          <div class="new-movies" id="new-movies"></div>
+              <div class="col-sm-12">
+          <div class="new-movies" id="new-movies">
+              </div>
         </div>
            </div>
 
@@ -105,7 +109,10 @@
            <div class="col-sm-10">
              <div class="movies">
           <a href="aboutMovie.html"><h2>Best Animation</h2></a>
+              <div class="col-sm-12">
           <div class="best-animation" id="best-animation"></div>
+              </div>
+
         </div>
            </div>
 
@@ -113,7 +120,9 @@
            <div class="col-sm-10">
             <div class="movies">
               <a href="aboutMovie.html"><h2>Family Time</h2></a>
+              <div class="col-sm-12">
               <div class="family-time" id="family-time"></div>
+              </div>
              </div>
            </div>
 
@@ -121,7 +130,9 @@
            <div class="col-sm-10">
             <div class="movies">
               <a href="aboutMovie.html"><h2>Get a shot of Adrenaline</h2></a>
-              <div class="adrenaline" id="adrenaline"></div>
+              <div class="col-sm-12">
+                 <div class="adrenaline" id="adrenaline"></div>
+              </div>
             </div>
            </div>
          </div>

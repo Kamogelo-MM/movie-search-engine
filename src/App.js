@@ -10,6 +10,7 @@ const options = {
 async function displayFeed() {
   try {
     const response = await axios.request(options);
+    //homepage
     const shows1 = response.data[0].movies;
     const show2 = response.data[1].movies;
     const show3 = response.data[2].movies;
@@ -24,6 +25,7 @@ async function displayFeed() {
     show5.forEach((movie) => {
       const movieElement = document.createElement("div");
       movieElement.innerHTML = `<img src=${movie.backdrop_path}>`;
+
       displayShow5.appendChild(movieElement);
     });
 
@@ -47,7 +49,7 @@ async function displayFeed() {
 
     shows1.forEach((movie) => {
       const movieElement = document.createElement("div");
-      movieElement.innerHTML = `<img src=${movie.backdrop_path}>'`;
+      movieElement.innerHTML = `<img src=${movie.backdrop_path}>`;
 
       displayShow1.appendChild(movieElement);
     });
@@ -58,4 +60,6 @@ async function displayFeed() {
   }
 }
 
-displayFeed();
+document.addEventListener("DOMContentLoaded", function () {
+  displayFeed();
+});
