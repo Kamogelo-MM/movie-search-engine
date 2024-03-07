@@ -1,9 +1,13 @@
 function createMovieElement(movie) {
   const movieElement = document.createElement("div");
   movieElement.innerHTML = `
+    
     <img src="${movie.poster_path}" alt="${movie.original_title}" />
     <h4><a>${movie.original_title}</a></h4>
-    <h6>${movie.genres}</h6`;
+    <h6>${movie.genres}</h6>
+   <button class="accordian">+</button>
+   
+   `;
   return movieElement;
 }
 
@@ -48,7 +52,7 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     //Handle Animated movies
     const animatedMovies = response.data[2];
-    const animatedMoviesContainer = document.getElementById("animation");
+    const animatedMoviesContainer = document.getElementById("animationMovies");
 
     if (!animatedMoviesContainer) {
       console.error("Container for Animated movies not found.");
@@ -74,7 +78,8 @@ document.addEventListener("DOMContentLoaded", async function () {
 
     //Handle adrenaline movies
     const adrenalineMovies = response.data[7];
-    const adrenalineMoviesContainer = document.getElementById("adrenaline");
+    const adrenalineMoviesContainer =
+      document.getElementById("adrenalineMovies");
 
     if (!adrenalineMoviesContainer) {
       console.error("Container for adrenaline movies not found.");
@@ -90,3 +95,11 @@ document.addEventListener("DOMContentLoaded", async function () {
     console.error(error);
   }
 });
+
+const accordian = document.getElementById("trendingMovies");
+
+for (i = 0; i < accordian.length; i++) {
+  accordian[i].addEventListener("click", function () {
+    this.classlist.toggle("active");
+  });
+}

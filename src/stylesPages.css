@@ -1,3 +1,27 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: 50px;
+}
+
+h1 {
+  border: 2px solid white;
+  background: white;
+  margin-bottom: 15px;
+  width: 1000px;
+}
+.grid-box {
+  position: relative;
+}
+
+.trending-movies img {
+  display: flex;
+  justify-content: left;
+  width: 120px;
+  border: 1px solid black;
+}
 .new-movies {
   margin-top: 50px;
 }
@@ -9,9 +33,69 @@
   justify-content: left;
   width: 80px;
 }
+.trending-movies div {
+  padding: 10px;
+  border-radius: 15px;
+  box-shadow: 5px 3px 5px 3px;
+}
+.new-movies div {
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.animation-movies div {
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.adrenaline-movies div {
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid black;
+}
+.family-movies div {
+  padding: 10px;
+  border-radius: 15px;
+  border: 1px solid black;
+}
 .family-movies img {
   width: 80px;
 }
 .adrenaline-movies img {
   width: 80px;
+}
+.trending-movies button {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  margin-left: 900px;
+  border: 0;
+}
+.adrenaline-movies button {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  margin-left: 900px;
+  border: 0;
+}
+.new-movies button {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  margin-left: 900px;
+  border: 0;
+}
+.animation-movies button {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  margin-left: 900px;
+  border: 0;
+}
+.family-movies button {
+  display: flex;
+  justify-content: right;
+  align-items: flex-end;
+  margin-left: 900px;
+  border: 0;
 }

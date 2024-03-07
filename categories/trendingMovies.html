@@ -25,7 +25,7 @@
       rel="stylesheet"
     />
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <link rel="stylesheet" href="/src/styles.css" />
+    <link rel="stylesheet" href="/src/stylesPages.css" />
     <title>Movie Search Engine: Find movies at tip of your fingers</title>
   </head>
   <body>
@@ -33,7 +33,7 @@
       <div class="trending-movies">
         <nav class="navbar navbar-dark bg-dark fixed-top">
           <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">Search Movies</a>
+            <a class="navbar-brand" href="/index.html">Search Movies</a>
             <button
               class="navbar-toggler"
               type="button"
@@ -67,7 +67,7 @@
                     <a
                       class="nav-link active"
                       aria-current="page"
-                      href="index.html"
+                      href="/index.html"
                       >Home</a
                     >
                   </li>
@@ -127,6 +127,7 @@
                 <form class="d-flex mt-3" role="search">
                   <input
                     class="form-control me-2"
+                    id="search-input"
                     type="search"
                     placeholder="Search"
                     aria-label="Search"
@@ -140,22 +141,20 @@
           </div>
         </nav>
         <!---Display trending movies---->
-        <div class="col-sm-12">
-          <h1>Trending Movies</h1>
+        
+          <h1 class="mt-4">Trending Movies</h1>
+        
+
+        <div class="col-sm-12 mt-2">
+             <div id="trendingMovies" class="trending-movies"></div>
+          </div>
+         
         </div>
-
-      <div class="box">
-        <div class="grid-row">
-          <span class="border">
-        <div id="trendingMovies" class="trending-movies"></div>
-
-          </span>
+          </div>
         </div>
-
       </div>
-
-    
     </div>
     <script src="/src/Pages.js"></script>
+    <script src="/src/search.js"></script>
   </body>
 </html>

@@ -18,10 +18,8 @@
       src="https://kit.fontawesome.com/b27adb8475.js"
       crossorigin="anonymous"
     ></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=PT+Serif:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  
     <link rel="stylesheet" href="src/styles.css" />
     <title>Movie Search Engine: Find movies at tip of your fingers</title>
   </head>
@@ -29,9 +27,13 @@
     <div class="container">
       <div class="search-engine">
       <!----NavBar-->
-      <nav class="navbar navbar-dark bg-dark fixed-top">
+      <nav class="navbar  fixed-top">
   <div class="container-fluid">
     <a class="navbar-brand" href="index.html">Search Movies</a>
+    <form class="d-flex searchBar" role="search">
+          <input class="form-control me-2" type="search" id="search-input" placeholder="Search" aria-label="Search" >
+          <button class="btn btn-success" type="submit" id="search-button"> <i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -64,7 +66,7 @@
         </ul>
         <form class="d-flex mt-3" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-success" type="submit"> <i class="fa-solid fa-magnifying-glass"></i></button>
+          <button class="btn btn-success" type="submit" id="search-button"> <i class="fa-solid fa-magnifying-glass"></i></button>
         </form>
       </div>
     </div>
@@ -73,23 +75,20 @@
  
 
          <!-----slideshow of movie pictures-->
-        <div class="display-card"></div>
+        <div class="display-card" id="display-card"></div>
 
-        <div class="row">
-           <div class="col-sm-8">
-             <h1>Search the latest</h1>
-             <p>Welcome! To your go-to destination for finding information on the latest movies and efficiently. 
-              Whether you're searching for the latest family, trending movies or anything in between, 
-              we're here to help you discover what you need.</p>
-           </div>
-        </div>  
+ 
+        <br>
+        <br>
+        <br>
+        <br>
 
         <!---Movies-->
         <div class="movies-grid">
         <div class="row">
            <div class="col-sm-10">
              <div class="movies">
-             <a href="aboutMovie.html"><h2>Trending Movies</h2></a>
+             <a href="/categories/trendingMovies.html"><h2>Trending Movies</h2></a>
               <div class="col-sm-12">
                 <div class="trending-show" id="trending-show"></div>
               </div>
@@ -98,7 +97,7 @@
          
            <div class="col-sm-10">
              <div class="movies">
-          <a href="aboutMovie.html"><h2>New Movies</h2></a>
+          <a href="/categories/newMovies.html"><h2>New Movies</h2></a>
               <div class="col-sm-12">
           <div class="new-movies" id="new-movies">
               </div>
@@ -108,7 +107,7 @@
        
            <div class="col-sm-10">
              <div class="movies">
-          <a href="aboutMovie.html"><h2>Best Animation</h2></a>
+          <a href="/categories/animation.html"><h2>Best Animation</h2></a>
               <div class="col-sm-12">
           <div class="best-animation" id="best-animation"></div>
               </div>
@@ -119,7 +118,7 @@
        
            <div class="col-sm-10">
             <div class="movies">
-              <a href="aboutMovie.html"><h2>Family Time</h2></a>
+              <a href="/categories/family.html"><h2>Family Time</h2></a>
               <div class="col-sm-12">
               <div class="family-time" id="family-time"></div>
               </div>
@@ -129,7 +128,7 @@
        
            <div class="col-sm-10">
             <div class="movies">
-              <a href="aboutMovie.html"><h2>Get a shot of Adrenaline</h2></a>
+              <a href="/categories/adrenaline.html"><h2>Get a shot of Adrenaline</h2></a>
               <div class="col-sm-12">
                  <div class="adrenaline" id="adrenaline"></div>
               </div>
@@ -137,9 +136,17 @@
            </div>
          </div>
         </div>
+        </div>
+        <hr>
+        <span>
+          <p>All rights reserved for kaymo</p>
+        </span>
+      </div>
+
        
         
 
     <script src="src/App.js"></script>
+    <script src="/src/search.js"></script>
   </body>
 </html>

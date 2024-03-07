@@ -63,3 +63,12 @@ async function displayFeed() {
 document.addEventListener("DOMContentLoaded", function () {
   displayFeed();
 });
+document.getElementById("search-input").addEventListener("input", async () => {
+  const query = document.getElementById("search-input").value.trim();
+  if (query !== "") {
+    const movies = await searchMovies(query);
+    populateDropdown(movies);
+  } else {
+    clearDropdown();
+  }
+});
